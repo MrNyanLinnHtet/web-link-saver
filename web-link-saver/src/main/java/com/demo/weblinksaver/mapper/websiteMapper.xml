@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper>
+<mapper namespace="com.demo.weblinksaver.mapper.WebsiteMapper">
 
+<resultMap id="dataMap" type="com.demo.weblinksaver.dto.Website">
+    <id property="id" column="id" jdbcType="INTEGER"/>
+    <result property="name" column="name" jdbcType="VARCHAR"/>
+    <result property="url" column="url" jdbcType="VARCHAR"/>
+</resultMap>
+
+<!--Insert Process-->
+    <insert id="insertData" parameterType="com.demo.weblinksaver.dto.Website" useGeneratedKeys="true" keyProperty="id">
+      INSERT INTO website (name,url)
+       VALUES (#{name},#{url})
+    </insert>
+
+<!--Find All Process-->
+    <select id="findAllData" resultMap="dataMap">
+        SELECT * FROM website
+    </select>
+
+<!--Find With Id Process-->
+    <select id="findById" parameterType="int" resultMap="dataMap">
+        SELECT * FROM website WHERE id = #{id}
+    </select>
+
+<!--Update Process-->
+    <update id="updateProcess" parameterType="com.demo.weblinksaver.dto.Website">
+        UPDATE website SET
+          name = #{name},
+          url  = #{url} WHERE id = #{id}
+    </update>
+
+<!--Delete Process-->
+    <delete id="deleteData" parameterType="int">
+        DELETE FROM website WHERE id = #{id}
+    </delete>
 </mapper>
