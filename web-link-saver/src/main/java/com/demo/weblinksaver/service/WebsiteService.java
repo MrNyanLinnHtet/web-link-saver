@@ -5,6 +5,8 @@ import com.demo.weblinksaver.dto.Website;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class WebsiteService {
 
@@ -13,5 +15,13 @@ public class WebsiteService {
 
     public void insertData(Website website) {
         websiteDao.insertData(website);
+    }
+
+    public List<Website> findAllData() {
+        return websiteDao.findAllData();
+    }
+
+    public Website findById(int id) {
+        return websiteDao.findById(id);
     }
 }

@@ -9,4 +9,8 @@ import java.util.List;
 public interface WebsiteMapper {
 
     void insertData(Website website);
+
+    List<Website> findAllData();
+
+    Website findById(int id);
 }

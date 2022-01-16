@@ -17,5 +17,13 @@ public class WebsiteDao {
         websiteMapper.insertData(website);
     }
 
+    public List<Website> findAllData() {
+        return websiteMapper.findAllData();
+    }
+
+    public Website findById(int id) {
+        return websiteMapper.findById(id);
+    }
+
 
 }
