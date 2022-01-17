@@ -13,4 +13,8 @@ public interface WebsiteMapper {
     List<Website> findAllData();
 
     Website findById(int id);
+
+    int updateData(Website website);
+
+    void deleteData(int id);
 }

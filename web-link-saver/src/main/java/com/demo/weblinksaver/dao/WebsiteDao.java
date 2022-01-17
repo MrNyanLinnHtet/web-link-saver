@@ -25,5 +25,13 @@ public class WebsiteDao {
         return websiteMapper.findById(id);
     }
 
+    public int updateData(Website website){
+        return websiteMapper.updateData(website);
+    }
+
+    public void deleteData(int id){
+         websiteMapper.deleteData(id);
+    }
+
 
 }

@@ -24,4 +24,12 @@ public class WebsiteService {
     public Website findById(int id) {
         return websiteDao.findById(id);
     }
+
+    public int updateData(Website website){
+        return websiteDao.updateData(website);
+    }
+
+    public void deleteData(int id){
+        websiteDao.deleteData(id);
+    }
 }

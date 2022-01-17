@@ -25,7 +25,7 @@
     </select>
 
 <!--Update Process-->
-    <update id="updateProcess" parameterType="com.demo.weblinksaver.dto.Website">
+    <update id="updateData" parameterType="com.demo.weblinksaver.dto.Website">
         UPDATE website SET
           name = #{name},
           url  = #{url} WHERE id = #{id}

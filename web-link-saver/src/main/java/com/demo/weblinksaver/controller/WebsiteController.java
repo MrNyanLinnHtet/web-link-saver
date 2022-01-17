@@ -30,4 +30,14 @@ public class WebsiteController {
     Website findById(@RequestParam(value = "id", required = true) int id) {
         return websiteService.findById(id);
     }
+
+    @RequestMapping(value = "/updateData",method = RequestMethod.PUT)
+     public @ResponseBody int updateData(@RequestBody Website website){
+        return websiteService.updateData(website);
+     }
+
+     @RequestMapping(value = "deleteData",method = RequestMethod.DELETE)
+     public @ResponseBody void deleteData(@RequestParam(value = "id",required = true) int id){
+        websiteService.deleteData(id);
+     }
 }
