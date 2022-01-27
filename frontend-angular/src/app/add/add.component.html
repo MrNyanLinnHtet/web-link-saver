@@ -1,0 +1,42 @@
+
+<h1 class="head">SAVE WEBSITE LINKS</h1>
+
+<div class="container con">
+
+  <form>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="card">
+          <div class="card-header"><i class="fa fa-database"></i><b class="mx-3"> SAVE YOUR WEBSTE DATA </b><i
+              class="fa fa-database"></i></div>
+
+          <div class="card-body">
+            <!-- Name Process -->
+            <div class="form-group">
+              <label class="my-2" for="name"><b>NAME :</b></label>
+              <input formControlName='name' required autocomplete="off" type="text" name="name" class="form-control"
+                placeholder="Enter Website Name !">
+              <!-- For Error Message -->
+            </div>
+
+            <!-- URL Process -->
+            <div class="form-group mt-3">
+              <label class="my-2" for="url"><b>URL :</b></label>
+              <input formControlName='url' autocomplete="off" required type="text" name="url" class="form-control"
+                placeholder="Enter Website URL !">
+              <!-- For Error Message -->
+
+            </div>
+
+             <div class="form-group mt-3">
+               <button class="btn btn-outline-success form-control mb-2">Save</button>
+               <button class="btn btn-outline-danger form-control">Update</button>
+             </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
