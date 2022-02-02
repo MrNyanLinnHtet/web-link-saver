@@ -1,1 +1,27 @@
-<p>home works!</p>
+<h1 class="head">List of Data</h1>
+<div class="container my-4">
+  <table class="table table-bordered table-info table-hover ">
+    <thead style="text-align: center;" class="tHead">
+      <th>ID</th>
+      <th>NAME</th>
+      <th>URL</th>
+      <th colspan="2">Actions</th>
+    </thead>
+
+    <tbody style="text-align: center;">
+      <tr *ngFor="let data of dataList">
+        <th scope="row">{{data.id}}</th>
+        <td>{{data.name}}</td>
+        <td>
+          <a href="{{data.url}}" target="_blank">{{data.url}}</a>
+        </td>
+        <td>
+          <button class="button btn btn-primary edit"><b class="pad">Edit</b> <i class="fa fa-pencil"></i></button>
+        </td>
+        <td colspan="2">
+          <!-- <a (click)="delete()" routerLink="/delete/{{website.id}}">Delete</a> -->
+          <button class="btn btn-danger"><b class="pad">Delete</b><i class="fa fa-trash"></i></button>
+        </td>
+      </tr>
+  </table>
+</div>

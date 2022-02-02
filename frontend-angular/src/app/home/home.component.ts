@@ -1,3 +1,4 @@
+import { WebService } from './../services/web.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  dataList: any;
+
+  constructor(private service: WebService) { }
 
   ngOnInit(): void {
+    this.getAllData();
   }
+
+  //  Select All Process
+  getAllData() {
+    this.service.findAll().subscribe(data => {
+
+      if (data) {
+        this.dataList = data;
+      }
+    }, error => {
+      alert("Error Found in Find All Process Sir !");
+    })
+  }
+
+
+
 
 }

@@ -1,0 +1,19 @@
+.head{
+  color: brown;
+  text-shadow: 2px 2px 0.7px grey;
+ text-align: center;
+ margin-bottom: 30px;
+}
+
+.edit{
+   width: 100px;
+}
+
+.tHead {
+  background-color: #169C6B;
+  color: white;
+}
+
+.pad{
+  padding-right: 10px;
+}
