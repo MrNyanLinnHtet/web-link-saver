@@ -1,5 +1,6 @@
-import { WebService } from './../services/web.service';
 import { Component, OnInit } from '@angular/core';
+
+import { WebService } from './../services/web.service';
 
 @Component({
   selector: 'app-home',
@@ -31,4 +32,11 @@ export class HomeComponent implements OnInit {
 
 
 
-}
+  
+
+  }
+
+
+
+
+

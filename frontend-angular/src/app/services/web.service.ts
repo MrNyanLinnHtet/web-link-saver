@@ -9,7 +9,7 @@ export class WebService {
   constructor(private http: HttpClient) { }
 
   insertData(data: any) {
-
+    return this.http.post('http://localhost:8080/insertData', data);
   }
 
   findAll() {

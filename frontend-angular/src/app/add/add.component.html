@@ -3,7 +3,7 @@
 
 <div class="container con">
 
-  <form>
+  <form [formGroup]="form">
 
     <div class="row">
       <div class="col-6">
@@ -30,7 +30,7 @@
             </div>
 
              <div class="form-group mt-3">
-               <button class="btn btn-outline-success form-control mb-2">Save</button>
+               <button (click)="addData()" class="btn btn-outline-success form-control mb-2">Save</button>
                <button class="btn btn-outline-danger form-control">Update</button>
              </div>
           </div>
