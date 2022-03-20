@@ -16,15 +16,15 @@ export class WebService {
     return this.http.get('http://localhost:8080/findAllData');
   }
 
-  findById() {
-
+  findById(id: any) {
+    return this.http.get('http://localhost:8080/findById?id=' + id);
   }
 
-  delete() {
-
+  delete(id: any) {
+    return this.http.delete('http://localhost:8080/deleteData?id=' + id);
   }
 
-  update() {
-
+  update(data: any) {
+    return this.http.put('http://localhost:8080/updateData', data)
   }
 }

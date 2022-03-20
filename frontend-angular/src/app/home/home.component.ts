@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 import { WebService } from './../services/web.service';
 
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   dataList: any;
 
-  constructor(private service: WebService) { }
+  constructor(private service: WebService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getAllData();
@@ -29,12 +30,30 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  //Delete Process
 
+  deleteData(id: any) {
+    this.route.paramMap.subscribe((param: ParamMap) => {
+      let id = param.get('id');
+      console.log(`Id is ${id}`)
 
-
-  
-
+      if (id) {
+        this.service.delete(id).subscribe((data) => {
+          console.log('Delete Process Successful !');
+          this.getAllData();
+        }, error => {
+          alert('Error is Found ! Dont\'t worry it\'s gonna be ok !')
+        })
+      }
+    })
   }
+
+
+
+
+
+
+}
 
 
 

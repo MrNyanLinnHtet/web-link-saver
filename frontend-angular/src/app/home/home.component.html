@@ -20,7 +20,7 @@
         </td>
         <td colspan="2">
           <!-- <a (click)="delete()" routerLink="/delete/{{website.id}}">Delete</a> -->
-          <button class="btn btn-danger"><b class="pad">Delete</b><i class="fa fa-trash"></i></button>
+          <button class="btn btn-danger" (click)="deleteData(data.id)" routerLink="/delete/{{data.id}}"><b class="pad">Delete</b><i class="fa fa-trash"></i></button>
         </td>
       </tr>
   </table>
