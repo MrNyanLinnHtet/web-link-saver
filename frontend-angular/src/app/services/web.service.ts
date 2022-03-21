@@ -25,6 +25,8 @@ export class WebService {
   }
 
   update(data: any) {
+    console.log(data)
     return this.http.put('http://localhost:8080/updateData', data)
+
   }
 }

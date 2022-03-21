@@ -16,11 +16,13 @@
           <a href="{{data.url}}" target="_blank">{{data.url}}</a>
         </td>
         <td>
-          <button class="button btn btn-primary edit"><b class="pad">Edit</b> <i class="fa fa-pencil"></i></button>
+          <button class="button btn btn-primary edit" routerLink="/update/{{data.id}}"><b class="pad">Edit</b> <i
+              class="fa fa-pencil"></i></button>
         </td>
         <td colspan="2">
           <!-- <a (click)="delete()" routerLink="/delete/{{website.id}}">Delete</a> -->
-          <button class="btn btn-danger" (click)="deleteData(data.id)" routerLink="/delete/{{data.id}}"><b class="pad">Delete</b><i class="fa fa-trash"></i></button>
+          <button class="btn btn-danger" (click)="deleteData()" routerLink="/delete/{{data.id}}"><b
+              class="pad">Delete</b><i class="fa fa-trash"></i></button>
         </td>
       </tr>
   </table>

@@ -24,26 +24,29 @@ export class HomeComponent implements OnInit {
 
       if (data) {
         this.dataList = data;
+      }else{
+        alert('Error is Found ! Dont\'t worry it\'s gonna be ok !')
       }
-    }, error => {
-      alert("Error Found in Find All Process Sir !");
-    })
+    }
+    )
   }
 
   //Delete Process
 
-  deleteData(id: any) {
+  deleteData() {
     this.route.paramMap.subscribe((param: ParamMap) => {
-      let id = param.get('id');
-      console.log(`Id is ${id}`)
+      let id = Number(param.get('id'));
+
 
       if (id) {
+        console.log(`Id is ${id}`)
         this.service.delete(id).subscribe((data) => {
-          console.log('Delete Process Successful !');
           this.getAllData();
-        }, error => {
-          alert('Error is Found ! Dont\'t worry it\'s gonna be ok !')
-        })
+          console.log('Delete Process Successful !');
+        }
+       )
+      }else{
+        alert('Error is Found ! Dont\'t worry it\'s gonna be ok !');
       }
     })
   }
